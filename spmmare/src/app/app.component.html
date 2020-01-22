@@ -1,0 +1,22 @@
+<div class = "container">
+    <form class = "jumbotron">
+      <div class = "form-group">
+       <label for = "testo"> add text:</label>
+      <input type = "testo" name = "testo" #newtxt class = "form-control">
+      </div>
+
+      <div class = "form-group">
+      <label for = "times">spam text:</label>
+      <input type = "times" name = "times" #newtimes class = "form-control">
+      </div>
+      <button (click)="aggiungiArt(newtxt, newtimes)" class = "btn btn-danger"> subimt </button>
+    </form>
+
+  <div class = "jumbotron" >
+    <ul class = "list-group">
+      <li *ngFor = "let c of articoli" class = "list-group-item">
+        <app-spam [spammone] = "c"></app-spam>
+      </li>
+    </ul>
+  </div>
+</div>
